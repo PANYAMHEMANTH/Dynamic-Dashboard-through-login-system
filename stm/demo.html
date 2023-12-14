@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>University Management System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="w3-container w3-theme w3-padding" id="myHeader">
+        <div class="logo" title="University Management System">
+            <img src="./images/logo.png" alt="">
+            <h2>U<span class="danger">M</span>S</h2>
+        </div>
+        <div class="navbar">
+            <a href="attendence.html">
+                <span class="material-icons-sharp">book</span>
+                <h3>Attendance</h3>
+            </a>
+            <a href="server.php">
+                <span class="material-icons-sharp">home</span>
+                <h3>Home</h3>
+            </a>
+            <!-- Add other navigation links here -->
+            <a href="timetable.php" onclick="timeTableAll()">
+                <span class="material-icons-sharp">today</span>
+                <h3>Time Table</h3>
+            </a>
+            <a href="exam.php">
+                <span class="material-icons-sharp">grid_view</span>
+                <h3>Examination</h3>
+            </a>
+            <a href="password.php">
+                <span class="material-icons-sharp">password</span>
+                <h3>Change Password</h3>
+            </a>
+            <a href="index.html">
+                <span class="material-icons-sharp" onclick="">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+        <div id="profile-btn">
+            <span class="material-icons-sharp">person</span>
+        </div>
+        <div class="theme-toggler" onclick="toggleTheme()">
+            <span class="material-icons-sharp active" id="lightIcon">light_mode</span>
+            <span class="material-icons-sharp" id="darkIcon">dark_mode</span>
+        </div>
+    </header>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="theme-text" align="center">Attendance</h1>
+    <br>
+
+    <div class="w3-row-padding w3-center w3-margin-top">
+        <div class="w3-half" style=" padding-left: 200px; padding-right: 150px;">
+            <div class="w3-card w3-container" style="min-height:460px;">
+                <h2 class="theme-text" ><b class="theme-text" >Present in last month</b></h2><br>
+                <i class="fa fa-book w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+                <p class="theme-text" >Progress of last month</p>
+                <p class="theme-text" >Progress of every week</p>
+                <p class="theme-text" >Present/Absent of every subject</p>
+                <br>
+                <button class="w3-button w3-theme">Learn More</button>
+            </div>
+        </div>
+
+        <div class="w3-half" style=" padding-left: 150px; padding-right: 200px;">
+            <div class="w3-card w3-container" style="min-height:460px">
+                <h2><b class="theme-text">Present in last year</b></h2><br>
+                <i class="fa fa-server w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+                <p class="theme-text">Progress of last year</p>
+                <p class="theme-text">Progress of last sem</p>
+                <p class="theme-text">Present/Absent of every subject</p>
+                <br>
+                <button class="w3-button w3-theme">Learn More</button>  
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <hr>
+        <div class="w3-center">
+            <h2>Color Classes</h2>
+        </div>
+
+        <div class="w3-row">
+            <div class="w3-col w3-container m2 w3-red"><p>Red</p></div>
+            <div class="w3-col w3-container m2 w3-blue"><p>Blue</p></div>
+            <div class="w3-col w3-container m2 w3-blue-grey"><p>Blue Grey</p></div>
+            <div class="w3-col w3-container m2 w3-teal"><p>Teal</p></div>
+            <div class="w3-col w3-container m2 w3-yellow"><p>Yellow</p></div>
+            <div class="w3-col w3-container m2 w3-orange"><p>Orange</p></div>
+        </div>
+
+        <hr>
+        <div class="w3-center">
+            <h2>Built-In Responsiveness</h2>
+            <p class="w3-large">Resize the page to see the effect!</p>
+        </div>
+        <br>
+
+        <div class="w3-row w3-border">
+            <div class="w3-half w3-container w3-blue">
+                <h5>Total no of days=100%</h5>  
+            </div>
+            <div class="w3-half w3-container w3-blue">
+                <h5>.</h5>  
+            </div>
+        </div>
+        <br>
+        <div class="w3-row w3-border">
+            <div class="w3-quarter w3-container w3-green">
+                <h5>NO of Presents = 80%</h5>  
+            </div>
+            <div class="w3-quarter w3-container w3-green">
+                <h5>.</h5>  
+            </div>
+            <div class="w3-quarter w3-container w3-green">
+                <h5>.</h5>  
+            </div>
+            <div class="w3-quarter w3-container">
+                <h5>.</h5>  
+            </div>
+        </div>
+        <br>
+        <div class="w3-row w3-border">
+            <div class="w3-quarter w3-container w3-red">
+                <h5>NO of Absent = 20%</h5>  
+            </div>
+            <div class="w3-quarter w3-container">
+                <h5></h5>  
+            </div>
+            <div class="w3-quarter w3-container">
+                <h5></h5>  
+            </div>
+            <div class="w3-quarter w3-container">
+                <h5></h5>  
+            </div>
+        </div> 
+        <header class="w3-container w3-blue-grey">
+            <h2>Header</h2>
+        </header>
+        <hr>
+        <h2 class="w3-center">Progress Bars</h2>
+        <div class="w3-container">
+
+            <div class="w3-light-gray">
+                <div id="myBar" class="w3-center w3-padding w3-theme" style="width:5%">5%</div>
+            </div><br>
+            <button class="w3-btn w3-theme" onclick="move()">Click Me</button> 
+        </div>
+        <hr>
+        <h2 class="w3-center">Tabs</h2>
+        <div class="w3-border">
+            <div class="w3-bar w3-theme">
+                <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'London')">London</button>
+                <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Paris')">Paris</button>
+                <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Tokyo')">Tokyo</button>
+            </div>
+
+            <div id="London" class="w3-container city w3-animate-opacity">
+                <h2>London</h2>
+                <p>London is the capital city of England.</p>
+                <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+            </div>
+
+            <div id="Paris" class="w3-container city w3-animate-opacity">
+                <h2>Paris</h2>
+                <p>Paris is the capital of France.</p> 
+                <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+            </div>
+
+            <div id="Tokyo" class="w3-container city w3-animate-opacity">
+                <h2>Tokyo</h2>
+                <p>Tokyo is the capital of Japan.</p>
+                <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-dark w3-padding-16" class="theme-text">
+        <h3>Footer</h3>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+            <span class="w3-text w3-theme-light w3-padding">Go To Top</span>  
+            <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+                <i class="fa fa-chevron-circle-up"></i></span></a>
+        </div>
+        <p>Remember to check out our  <a href="w3css_references.asp" class="w3-btn w3-theme-light" target="_blank">W3.CSS Reference</a></p>
+    </footer>
+
+    <!-- Script for Sidebar, Tabs, Accordions, Progress bars, and slideshows -->
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<script>
+function toggleTheme() {
+    var body = document.body;
+    var lightIcon = document.getElementById('lightIcon');
+    var darkIcon = document.getElementById('darkIcon');
+
+    if (body.classList.contains('w3-theme-dark')) {
+        body.classList.remove('w3-theme-dark');
+        body.classList.add('w3-theme-light');
+        lightIcon.classList.add('active');
+        darkIcon.classList.remove('active');
+    } else {
+        body.classList.remove('w3-theme-light');
+        body.classList.add('w3-theme-dark');
+        lightIcon.classList.remove('active');
+        darkIcon.classList.add('active');
+    }
+
+    updateTextColor();
+}
+
+function updateTextColor() {
+    var body = document.body;
+    var textElements = document.querySelectorAll('.theme-text');
+
+    if (body.classList.contains('w3-theme-dark')) {
+        // Set text color for dark theme
+        textElements.forEach(function (element) {
+            element.style.color = '#ffffff'; // White text for dark theme
+        });
+    } else {
+        // Set text color for light theme
+        textElements.forEach(function (element) {
+            element.style.color = '#000000'; // Black text for light theme
+        });
+    }
+}
+
+// Add any other functions or code you want to separate here
+
+ </script>
+ // Add any other functions or code you want to separate here
+ 
+</body>
+
+</html>

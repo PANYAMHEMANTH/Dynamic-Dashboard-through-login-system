@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Form</title>
+        <link rel="icon" type="image/png" href="img/logo.png">
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            /* Add CSS styles for the Submit button */
+       
+        </style>
+    </head>
+<body>
+    <div class="login_form_container">
+        <div class="login_form">
+            <h2>Login</h2>
+            <form id="loginForm" action="login.php" method="post">
+                <div class="input_group">
+                    <i class="fa fa-envelope"></i>
+                    <input
+                        type="text"
+                        placeholder="Email"
+                        class="input_text"
+                        autocomplete="off"
+                        name="email" 
+                    />
+                </div>
+                <div class="input_group">
+                    <i class="fa fa-unlock-alt"></i>
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        class="input_text"
+                        autocomplete="off"
+                        name="password" 
+                    />
+                </div>
+                <div class="button_group" id="login_button">
+                    <!-- Add an ID to the Submit button -->
+                    <button id="login_button" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="app.js"></script> <!-- Create a new JavaScript file for handling AJAX requests -->
+</body>
+</html>

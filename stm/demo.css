@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    background-color: #000; /* Dark background color */
+    overflow: hidden;
+}
+
+.mirror-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center vertically */
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+.profile {
+    width: 250px;
+    position: relative;
+    margin: 20px;
+    overflow: hidden;
+    z-index: 2;
+    background: #0c1022; /* Opaque dark background color */
+}
+
+.profile:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: rgba(12, 16, 34, 0.7); /* Transparent dark margin */
+    z-index: -1;
+    border-radius: 8px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.profile-body {
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-title,
+.profile-text {
+    color: #00ccff;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #0c1022;
+    border: 1px solid #00ccff;
+    color: #00ccff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #00ccff;
+    color: #0c1022;
+}
+
+.mirror-background1::before,
+.mirror-background1::after,
+.mirror-background2::before,
+.mirror-background2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.mirror-background1::before,
+.mirror-background2::before {
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    animation: rotate_mirror 6s linear infinite;
+}
+
+.mirror-background1::after,
+.mirror-background2::after {
+    background-image: conic-gradient(transparent, transparent, transparent, #ee00ff);
+    animation: rotate_mirror 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes rotate_mirror {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
