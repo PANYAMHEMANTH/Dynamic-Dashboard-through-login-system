@@ -1,7 +1,8 @@
 # Student-Dashboard
 A responsive and dynamic Student Dashboard  project made up using HTML, CSS, JavaScript & PHP
 
-before using it create database and table copy paste below in your sql
+*create "uploads" folder if it was not created automatically 
+*before using it create database and table copy paste below in your sql
 ////////////////////////////////////////////
 CREATE DATABASE dbs;
 
